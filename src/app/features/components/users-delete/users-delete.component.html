@@ -1,0 +1,13 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        
+      <label for="id">ID</label>
+      <input type="text" id="id" formControlName="id" class="form-control" />
+      <div *ngIf="userForm.get('id')?.invalid && userForm.get('id')?.touched" class="text-danger">
+        ID is required.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">
+    Delete
+</button>
+    </form>

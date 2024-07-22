@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Country
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of usersData">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.country}}</td>
+        </tr>
+    </tbody>
+</table>
